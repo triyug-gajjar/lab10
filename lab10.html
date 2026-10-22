@@ -1,0 +1,143 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrendKart - Online Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-50">
+
+    <!-- Header -->
+    <header class="bg-teal-950 text-white px-6 py-5 shadow-lg">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-4">
+            <h1 class="text-3xl font-bold text-emerald-300">
+                TrendKart
+            </h1>
+
+            <nav class="flex gap-6 text-sm">
+                <a href="#" class="hover:text-emerald-300">Home</a>
+                <a href="#products" class="hover:text-emerald-300">Products</a>
+                <a href="#footer" class="hover:text-emerald-300">Contact</a>
+            </nav>
+
+            <p class="text-emerald-200">Shop Smart, Live Better</p>
+        </div>
+    </header>
+
+    <!-- Product Section -->
+    <main id="products" class="max-w-7xl mx-auto px-6 py-12">
+
+        <div class="text-center mb-10">
+            <p class="text-teal-700 font-semibold mb-2">DISCOVER OUR COLLECTION</p>
+            <h2 class="text-4xl font-bold text-slate-800">
+                Featured Products
+            </h2>
+            <p class="text-slate-500 mt-3">
+                Find your favorites at amazing prices.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <!-- Laptop -->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=600&q=80"
+                         alt="Laptop"
+                         class="w-full h-52 object-cover">
+                    <span class="absolute top-3 left-3 bg-emerald-500 text-white text-xs px-3 py-1 rounded-full">
+                        Best Seller
+                    </span>
+                </div>
+
+                <div class="p-5">
+                    <h3 class="text-xl font-bold text-slate-800">Laptop Pro</h3>
+                    <p class="text-slate-500 text-sm mt-2">Powerful performance for work and play.</p>
+                    <p class="text-2xl font-bold text-teal-800 mt-4">₹52,999</p>
+
+                    <button onclick="addToCart('Laptop Pro', 52999)"
+                            class="w-full bg-teal-800 hover:bg-teal-950 text-white py-3 rounded-full mt-4 transition">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Smartphone -->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80"
+                         alt="Smartphone"
+                         class="w-full h-52 object-cover">
+                    <span class="absolute top-3 left-3 bg-violet-500 text-white text-xs px-3 py-1 rounded-full">
+                        New Arrival
+                    </span>
+                </div>
+
+                <div class="p-5">
+                    <h3 class="text-xl font-bold text-slate-800">Smartphone X1</h3>
+                    <p class="text-slate-500 text-sm mt-2">Capture moments and stay connected.</p>
+                    <p class="text-2xl font-bold text-teal-800 mt-4">₹22,999</p>
+
+                    <button onclick="addToCart('Smartphone X1', 22999)"
+                            class="w-full bg-teal-800 hover:bg-teal-950 text-white py-3 rounded-full mt-4 transition">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Shoes -->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
+                         alt="Sports Shoes"
+                         class="w-full h-52 object-cover">
+                    <span class="absolute top-3 left-3 bg-orange-500 text-white text-xs px-3 py-1 rounded-full">
+                        Trending
+                    </span>
+                </div>
+
+                <div class="p-5">
+                    <h3 class="text-xl font-bold text-slate-800">Sports Shoes</h3>
+                    <p class="text-slate-500 text-sm mt-2">Comfort and style for every step.</p>
+                    <p class="text-2xl font-bold text-teal-800 mt-4">₹2,499</p>
+
+                    <button onclick="addToCart('Sports Shoes', 2499)"
+                            class="w-full bg-teal-800 hover:bg-teal-950 text-white py-3 rounded-full mt-4 transition">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Watch -->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=600&q=80"
+                         alt="Wrist Watch"
+                         class="w-full h-52 object-cover">
+                    <span class="absolute top-3 left-3 bg-amber-500 text-white text-xs px-3 py-1 rounded-full">
+                        Popular
+                    </span>
+                </div>
+
+                <div class="p-5">
+                    <h3 class="text-xl font-bold text-slate-800">Classic Watch</h3>
+                    <p class="text-slate-500 text-sm mt-2">A timeless look for every occasion.</p>
+                    <p class="text-2xl font-bold text-teal-800 mt-4">₹3,999</p>
+
+                    <button onclick="addToCart('Classic Watch', 3999)"
+                            class="w-full bg-teal-800 hover:bg-teal-950 text-white py-3 rounded-full mt-4 transition">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Cart Summary -->
+        <div class="mt-10 bg-emerald-50 border border-emerald-200 rounded-xl p-5 text-center">
+            <h3 class="text-xl font-bold text-teal-950">Your Shopping Cart</h3>
+            <p id="cartCount" class="mt-2 text-slate-600">Items added: 0</p>
+           
